@@ -10,7 +10,7 @@ export const profile = {
   email: "mgbemenaosonduv@gmail.com",
   phone: "+234 9077955363",
   resumeUrl:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
+    "https://drive.google.com/file/d/178ElrgS83nhv-1ZJ0dMQ-1RNuHr9LdgR/view?usp=sharing",
   github: "https://github.com/Victor-MGB",
   linkedin: "https://www.linkedin.com/in/victor-osondu777/",
   x: "https://x.com/Victor01808002",
