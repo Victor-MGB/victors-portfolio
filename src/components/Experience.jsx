@@ -1,6 +1,7 @@
 import React from "react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import { GithubIcon, ArrowUpRightIcon } from "./icons";
 import { experience } from "../data/portfolio";
 
 export default function Experience() {
@@ -39,6 +40,33 @@ export default function Experience() {
                   </span>
                 ))}
               </div>
+
+              {job.links && (
+                <div className="experience__links">
+                  {job.links.demo && (
+                    <a
+                      href={job.links.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="experience__link"
+                    >
+                      Live site
+                      <ArrowUpRightIcon width="14" height="14" />
+                    </a>
+                  )}
+                  {job.links.github && (
+                    <a
+                      href={job.links.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="experience__link"
+                    >
+                      <GithubIcon width="14" height="14" />
+                      Source
+                    </a>
+                  )}
+                </div>
+              )}
             </Reveal>
           ))}
         </div>

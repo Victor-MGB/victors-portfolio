@@ -869,6 +869,32 @@ p {
   margin-top: 18px;
 }
 
+.experience__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.experience__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-text);
+  transition: opacity 0.2s ease;
+}
+
+.experience__link:hover {
+  opacity: 0.75;
+}
+
+.experience__link svg {
+  width: 15px;
+  height: 15px;
+}
+
 /* ---------- Projects ---------- */
 
 .projects__list {

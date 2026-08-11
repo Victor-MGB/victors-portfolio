@@ -119,6 +119,25 @@ export const skills = [
 
 export const experience = [
   {
+    role: "Freelance Web Developer & Consultant",
+    company: "Able World Consultancy — Client Project",
+    date: "2025 – Present",
+    desc: "Designed, built, and deployed a production marketing website for a study-abroad consultancy in Ahmedabad, India — owning the full engagement from discovery to live launch for a paying client.",
+    highlights: [
+      "Delivered a complete multi-page site (Home, About, Services, Destinations, Contact) from design to production, building trust with a real client through clear scoping and communication.",
+      "Crafted a reusable Tailwind design system (brand, accent, panel, surface tokens) for a consistent, on-brand experience across every page.",
+      "Added scroll reveals and page transitions with Framer Motion plus an Embla testimonial slider for a polished, conversion-focused user experience.",
+      "Engineered SEO-ready pages, a search widget for study destinations, and WhatsApp CTAs to drive client enquiries.",
+      "Shipped CI/CD via Netlify with SPA redirects and instant preview deploys — a smooth, professional release workflow.",
+      "Built for accessibility, responsiveness, and fast page loads so the site performs on any device, from any location.",
+    ],
+    stack: ["React", "Vite", "Tailwind CSS", "React Router", "Framer Motion", "Netlify"],
+    links: {
+      demo: "https://ableworldconsultancy.netlify.app/",
+      github: "https://github.com/Victor-MGB/ableworldconsultancy",
+    },
+  },
+  {
     role: "Software Engineer",
     company: "Panda Giant Developer Ltd",
     date: "Apr 2025 – Mar 2026",
