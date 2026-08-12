@@ -97,7 +97,7 @@ export default function Projects() {
         <SectionHeading
           eyebrow="Selected Work"
           title="Projects built like products."
-          description="A few systems I've designed and built — each one solving a real problem with a clear architecture."
+          description="Production systems I've designed and built — each with a clear problem, a real architecture, and source you can verify."
         />
 
         <div className="projects__list">

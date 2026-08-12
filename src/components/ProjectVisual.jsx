@@ -119,10 +119,60 @@ function TermMockup() {
   );
 }
 
+function BankMockup() {
+  const stages = [
+    { name: "Identity Verification", status: "approved" },
+    { name: "AML Compliance Screening", status: "approved" },
+    { name: "Sanctions List Screening", status: "review" },
+    { name: "Board-Level Authorization", status: "pending" },
+    { name: "Final Release Authorization", status: "pending" },
+  ];
+
+  return (
+    <BrowserFrame variant="bank">
+      <div className="mockup__sidebar">
+        <span className="mockup__sidebar-item mockup__sidebar-item--active" style={{ width: "80%" }} />
+        <span className="mockup__sidebar-item" style={{ width: "90%" }} />
+        <span className="mockup__sidebar-item" style={{ width: "70%" }} />
+        <span className="mockup__sidebar-item" style={{ width: "85%" }} />
+        <span className="mockup__sidebar-item" style={{ width: "60%" }} />
+      </div>
+      <div className="mockup__main">
+        <div className="mockup__row">
+          <div className="mockup__line" style={{ width: "38%" }} />
+        </div>
+        <div className="mockup__bank-balance">
+          <div className="mockup__line mockup__line--soft" style={{ width: "28%" }} />
+          <div className="mockup__line mockup__line--accent" style={{ width: "58%" }} />
+          <div className="mockup__row" style={{ marginTop: 2 }}>
+            <div className="mockup__line mockup__line--soft" style={{ width: "22%" }} />
+            <div className="mockup__line mockup__line--soft" style={{ width: "30%" }} />
+          </div>
+        </div>
+        <div className="mockup__row">
+          <div className="mockup__line mockup__line--soft" style={{ width: "45%" }} />
+        </div>
+        <div className="mockup__stages">
+          {stages.map((stage) => (
+            <div className="mockup__stage" key={stage.name}>
+              <span className={`mockup__stage-dot mockup__stage-dot--${stage.status}`} />
+              <span className="mockup__stage-name">{stage.name}</span>
+              <span className={`mockup__stage-chip mockup__stage-chip--${stage.status}`}>
+                {stage.status}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </BrowserFrame>
+  );
+}
+
 const variants = {
   chat: ChatMockup,
   dashboard: DashboardMockup,
   terminal: TermMockup,
+  bank: BankMockup,
 };
 
 export default function ProjectVisual({ variant }) {

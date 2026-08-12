@@ -3,7 +3,7 @@ export const profile = {
   monogram: "VM",
   role: "Backend Engineer",
   roles: ["Backend Engineer", "AI Engineer", "Cloud Infrastructure"],
-  lead: "Building scalable APIs, intelligent systems, and cloud infrastructure.",
+  lead: "I build production-grade backend systems — fintech-grade APIs, AI infrastructure, and the plumbing that keeps platforms running — designed to stay reliable under load and easy to maintain.",
   summary:
     "I design and build backend systems that power AI products, process millions of requests, and stay reliable under load. I focus on clean architecture, well-considered APIs, and shipping systems that engineers enjoy maintaining.",
   location: "Nigeria",
@@ -22,11 +22,15 @@ export const profile = {
     },
     {
       label: "Focus",
-      value: "AI infrastructure, distributed systems, cloud",
+      value: "Fintech, AI infrastructure, distributed systems",
     },
     {
       label: "Experience",
       value: "3+ years building production software",
+    },
+    {
+      label: "Notable build",
+      value: "22-stage compliance workflow for a banking backend",
     },
     {
       label: "Based in",
@@ -46,7 +50,7 @@ export const navLinks = [
 export const about = {
   paragraphs: [
     "I'm a backend engineer who builds **scalable APIs, intelligent systems, and cloud infrastructure** for AI-powered products. I work primarily with **Node.js, Python, FastAPI, and PostgreSQL**, and I care deeply about reliability, observability, and clean software design.",
-    "Over the past few years I've shipped production systems across e-commerce, logistics, and AI platforms — from order-processing pipelines to **LLM-powered assistants and RAG pipelines**. I've also contributed to government and enterprise projects as a software engineer during my national service.",
+    "Over the past few years I've shipped production systems across e-commerce, logistics, fintech, and AI platforms — from order-processing pipelines and **multi-currency banking APIs** to **LLM-powered assistants and RAG pipelines**. I've also contributed to government and enterprise projects as a software engineer during my national service.",
     "I treat engineering as a craft: predictable performance, thoughtful API contracts, and architecture that can grow with the product. I enjoy turning ambiguous problems into simple, well-engineered systems.",
   ],
 };
@@ -190,6 +194,27 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    name: "Halifax Offshore Private Bank — Backend API",
+    tagline:
+      "Production banking backend with a 22-stage compliance workflow.",
+    description:
+      "A complete digital-banking backend: JWT auth, multi-currency accounts, ACID-safe transfers, an in-app notification system, admin analytics, and a 22-stage withdrawal compliance pipeline — built with Node.js, Express, and MongoDB and deployed with Docker.",
+    problem:
+      "Private banking demands institutional-grade security and compliance — not just CRUD. Every withdrawal must pass strict verification before funds move, and every financial write must stay consistent even under retries or partial failures.",
+    architecture: [
+      "22-stage withdrawal compliance workflow with a per-stage audit trail (triggeredAt, resolvedAt, adminNote) and automatic user notifications at every stage",
+      "Transfers wrapped in MongoDB transactions for atomic debit/credit — no lost or duplicated funds",
+      "Multi-currency accounts with auto-generated 10-digit numbers, freeze/suspend controls, and role-based access (user / admin)",
+      "JWT + bcrypt auth (10 salt rounds), suspended-account login blocking, and CORS locked to configured frontend origins",
+      "Admin analytics (volume, trends, categories), user/account management, and a priority-labelled support-ticket system",
+      "Dockerized with 6 health/monitoring endpoints and a demo seeder (3 users, 30+ transactions)",
+    ],
+    stack: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "bcryptjs", "Docker"],
+    github: "https://github.com/Victor-MGB/halifax_backend",
+    demo: "https://transcendent-semifreddo-84170b.netlify.app/",
+    visual: "bank",
+  },
   {
     name: "Ledger — AI Finance Dashboard",
     tagline: "Personal finance dashboard with real bank data and AI insights.",
