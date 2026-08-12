@@ -216,6 +216,27 @@ export const projects = [
     visual: "bank",
   },
   {
+    name: "SwiftCargo",
+    tagline:
+      "Logistics tracking platform where every shipment is confirmed by a real admin.",
+    description:
+      "A full-stack logistics platform for ordering, tracking, and communicating shipment status. Clients place orders or receive a tracking code, upload payment proofs, and follow their parcel on a map — but nothing becomes visible until an admin manually approves it. Payments happen off-platform via WhatsApp/Telegram.",
+    problem:
+      "Real-world logistics runs on phone calls, trust, and manual verification — not automated systems. Shipments need a visible, official status, but the operator must personally confirm every step (order, payment, location) before clients see anything.",
+    architecture: [
+      "Pending → approved approval cycle: new orders, payment proofs, and map/location updates all stay hidden from clients until an admin explicitly approves them",
+      "Dual dashboards: a public storefront + client dashboard, and an admin dashboard for products, the full order queue, guest tracking-code generation, and payment-proof review",
+      "Map tracking built on OpenStreetMap — admin searches or clicks a spot, it saves as pending, and clients only ever see the last approved location",
+      "JWT + bcrypt auth with separate client and admin roles, plus in-app notifications (bell icon) for every status and location change",
+      "Guest tracking codes let unregistered clients follow a parcel — generated and shared manually by the admin",
+      "Payment proofs routed to a dedicated review queue where approval also flips the order's status",
+    ],
+    stack: ["Node.js", "Express.js", "MongoDB", "React", "Vite", "Tailwind CSS", "OpenStreetMap", "JWT"],
+    github: "https://github.com/Victor-MGB/SwiftCargo",
+    demo: "https://swiftcarg.netlify.app/",
+    visual: "map",
+  },
+  {
     name: "Ledger — AI Finance Dashboard",
     tagline: "Personal finance dashboard with real bank data and AI insights.",
     description:

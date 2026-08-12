@@ -168,11 +168,50 @@ function BankMockup() {
   );
 }
 
+function MapMockup() {
+  return (
+    <BrowserFrame variant="map">
+      <div className="mockup__main" style={{ gap: 10 }}>
+        <div className="mockup__map-toolbar">
+          <span className="mockup__line" style={{ width: "34%" }} />
+          <span className="mockup__line mockup__line--soft" style={{ width: "18%" }} />
+        </div>
+        <div className="mockup__map">
+          <div className="mockup__map-grid" />
+          <div className="mockup__map-route" />
+          <span className="mockup__map-stop mockup__map-stop--origin" />
+          <span className="mockup__map-stop mockup__map-stop--mid" />
+          <span className="mockup__map-stop mockup__map-stop--dest" />
+          <div className="mockup__map-pin mockup__map-pin--approved">
+            <span className="mockup__map-pin-dot" />
+            <span className="mockup__map-pin-chip">Approved</span>
+          </div>
+          <div className="mockup__map-pin mockup__map-pin--pending">
+            <span className="mockup__map-pin-dot" />
+            <span className="mockup__map-pin-chip">Pending review</span>
+          </div>
+        </div>
+        <div className="mockup__row">
+          <div className="mockup__card">
+            <div className="mockup__line mockup__line--soft" style={{ width: "55%" }} />
+            <div className="mockup__line mockup__line--accent" style={{ width: "75%" }} />
+          </div>
+          <div className="mockup__card">
+            <div className="mockup__line mockup__line--soft" style={{ width: "55%" }} />
+            <div className="mockup__line mockup__line--accent" style={{ width: "75%" }} />
+          </div>
+        </div>
+      </div>
+    </BrowserFrame>
+  );
+}
+
 const variants = {
   chat: ChatMockup,
   dashboard: DashboardMockup,
   terminal: TermMockup,
   bank: BankMockup,
+  map: MapMockup,
 };
 
 export default function ProjectVisual({ variant }) {

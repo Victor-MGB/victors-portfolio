@@ -1319,6 +1319,124 @@ p {
   background: var(--surface-3);
 }
 
+/* Map / logistics variant */
+.mockup--map .mockup__map-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mockup--map .mockup__map {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+
+.mockup--map .mockup__map-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 26px 26px;
+  opacity: 0.55;
+}
+
+.mockup--map .mockup__map-route {
+  position: absolute;
+  top: 46%;
+  left: 12%;
+  width: 76%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: 0.55;
+  transform: rotate(-7deg);
+}
+
+.mockup--map .mockup__map-stop {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--surface-2), 0 0 0 3px var(--accent);
+}
+
+.mockup--map .mockup__map-stop--origin {
+  top: 46%;
+  left: 12%;
+}
+
+.mockup--map .mockup__map-stop--mid {
+  top: 46%;
+  left: 50%;
+}
+
+.mockup--map .mockup__map-stop--dest {
+  top: 46%;
+  left: 88%;
+}
+
+.mockup--map .mockup__map-pin {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.mockup--map .mockup__map-pin--approved {
+  top: 24%;
+  left: 30%;
+}
+
+.mockup--map .mockup__map-pin--pending {
+  top: 62%;
+  left: 62%;
+}
+
+.mockup--map .mockup__map-pin-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.mockup--map .mockup__map-pin--approved .mockup__map-pin-dot {
+  background: var(--success);
+}
+
+.mockup--map .mockup__map-pin--pending .mockup__map-pin-dot {
+  background: var(--accent);
+}
+
+.mockup--map .mockup__map-pin-chip {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.mockup--map .mockup__map-pin--approved .mockup__map-pin-chip {
+  color: var(--success);
+  background: var(--success-soft);
+}
+
+.mockup--map .mockup__map-pin--pending .mockup__map-pin-chip {
+  color: var(--accent-text);
+  background: var(--accent-soft);
+}
+
 /* ---------- Contact ---------- */
 
 .contact__grid {
