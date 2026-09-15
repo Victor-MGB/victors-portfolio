@@ -2,10 +2,10 @@ import React from "react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import ProjectVisual from "./ProjectVisual";
-import { projects } from "../data/portfolio";
-import { GithubIcon, ArrowUpRightIcon, CheckIcon } from "./icons";
+import {projects} from "../data/portfolio";
+import {GithubIcon, ArrowUpRightIcon, CheckIcon} from "./icons";
 
-function ProjectCard({ project, index }) {
+function ProjectCard({project, index}) {
   const flipped = index % 2 === 1;
   const link = project.demo || project.github;
 
@@ -15,15 +15,27 @@ function ProjectCard({ project, index }) {
       as="article"
     >
       <div className="project__visual">
-        <a
-          className="project__visual-link"
-          href={link}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`Open ${project.name}`}
-        >
-          <ProjectVisual variant={project.visual} />
-        </a>
+        {project.gallery ? (
+          <ProjectVisual
+            variant={project.visual}
+            gallery={project.gallery}
+            href={link}
+          />
+        ) : link ? (
+          <a
+            className="project__visual-link"
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${project.name}`}
+          >
+            <ProjectVisual variant={project.visual} />
+          </a>
+        ) : (
+          <div className="project__visual-link">
+            <ProjectVisual variant={project.visual} />
+          </div>
+        )}
       </div>
 
       <div className="project__body">
@@ -41,7 +53,7 @@ function ProjectCard({ project, index }) {
         <div className="project__arch">
           <h4 className="project__arch-title">Architecture highlights</h4>
           <ul className="project__arch-list">
-            {project.architecture.map((point) => (
+            {project.architecture.map(point => (
               <li key={point}>
                 <CheckIcon />
                 {point}
@@ -51,7 +63,7 @@ function ProjectCard({ project, index }) {
         </div>
 
         <div className="project__stack">
-          {project.stack.map((tech) => (
+          {project.stack.map(tech => (
             <span className="chip" key={tech}>
               {tech}
             </span>
@@ -59,16 +71,18 @@ function ProjectCard({ project, index }) {
         </div>
 
         <div className="project__links">
-          <a
-            className="project__link"
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GithubIcon />
-            GitHub
-            <ArrowUpRightIcon />
-          </a>
+          {project.github && (
+            <a
+              className="project__link"
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GithubIcon />
+              GitHub
+              <ArrowUpRightIcon />
+            </a>
+          )}
           {project.demo ? (
             <a
               className="project__link"
@@ -77,10 +91,13 @@ function ProjectCard({ project, index }) {
               rel="noreferrer"
             >
               <ArrowUpRightIcon />
-              Live Demo
+              {project.demoLabel || "Live Demo"}
             </a>
           ) : (
-            <span className="project__link" style={{ color: "var(--text-muted)", cursor: "default" }}>
+            <span
+              className="project__link"
+              style={{color: "var(--text-muted)", cursor: "default"}}
+            >
               Demo coming soon
             </span>
           )}

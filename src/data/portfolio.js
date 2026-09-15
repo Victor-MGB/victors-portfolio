@@ -1,3 +1,12 @@
+import knowflowLogin from "../assets/projects/knowflow/knowflow-login.png";
+import knowflowRegister from "../assets/projects/knowflow/knowflow-register.png";
+import knowflowDocuments from "../assets/projects/knowflow/knowflow-documents.png";
+import knowflowChat from "../assets/projects/knowflow/knowflow-chat.png";
+import knowflowRefusal from "../assets/projects/knowflow/knowflow-refusal.png";
+import knowflowGrafana from "../assets/projects/knowflow/knowflow-grafana.png";
+import knowflowApiDocs from "../assets/projects/knowflow/knowflow-api-docs.png";
+import knowflowDemoVideo from "../assets/projects/knowflow/knowflow-live-demo.mp4";
+
 export const profile = {
   name: "Victor Mgbemena",
   monogram: "VM",
@@ -18,53 +27,48 @@ export const profile = {
   facts: [
     {
       label: "Currently",
-      value: "Open to senior backend & AI engineering roles",
+      value: "Open to senior backend & AI engineering roles"
     },
     {
       label: "Focus",
-      value: "Fintech, AI infrastructure, distributed systems",
+      value: "Fintech, AI infrastructure, distributed systems"
     },
     {
       label: "Experience",
-      value: "3+ years building production software",
+      value: "3+ years building production software"
     },
     {
       label: "Notable build",
-      value: "22-stage compliance workflow for a banking backend",
+      value: "22-stage compliance workflow for a banking backend"
     },
     {
       label: "Based in",
-      value: "Nigeria — remote friendly, flexible hours",
-    },
-  ],
+      value: "Nigeria — remote friendly, flexible hours"
+    }
+  ]
 };
 
 export const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  {label: "About", href: "#about"},
+  {label: "Skills", href: "#skills"},
+  {label: "Experience", href: "#experience"},
+  {label: "Projects", href: "#projects"},
+  {label: "Contact", href: "#contact"}
 ];
 
 export const about = {
   paragraphs: [
     "I'm a backend engineer who builds **scalable APIs, intelligent systems, and cloud infrastructure** for AI-powered products. I work primarily with **Node.js, Python, FastAPI, and PostgreSQL**, and I care deeply about reliability, observability, and clean software design.",
     "Over the past few years I've shipped production systems across e-commerce, logistics, fintech, and AI platforms — from order-processing pipelines and **multi-currency banking APIs** to **LLM-powered assistants and RAG pipelines**. I've also contributed to government and enterprise projects as a software engineer during my national service.",
-    "I treat engineering as a craft: predictable performance, thoughtful API contracts, and architecture that can grow with the product. I enjoy turning ambiguous problems into simple, well-engineered systems.",
-  ],
+    "I treat engineering as a craft: predictable performance, thoughtful API contracts, and architecture that can grow with the product. I enjoy turning ambiguous problems into simple, well-engineered systems."
+  ]
 };
 
 export const skills = [
   {
     name: "Languages",
     icon: "code",
-    items: [
-      "JavaScript / TypeScript",
-      "Python",
-      "SQL",
-      "HTML & CSS",
-    ],
+    items: ["JavaScript / TypeScript", "Python", "SQL", "HTML & CSS"]
   },
   {
     name: "Backend",
@@ -74,8 +78,8 @@ export const skills = [
       "Python & FastAPI",
       "REST API design",
       "WebSockets & real-time services",
-      "Microservices architecture",
-    ],
+      "Microservices architecture"
+    ]
   },
   {
     name: "AI & ML",
@@ -85,8 +89,8 @@ export const skills = [
       "Retrieval-Augmented Generation (RAG)",
       "AI agents & workflow automation",
       "Prompt engineering",
-      "LangChain & vector search",
-    ],
+      "LangChain & vector search"
+    ]
   },
   {
     name: "Cloud & DevOps",
@@ -96,8 +100,8 @@ export const skills = [
       "Docker & containerization",
       "GitHub Actions & CI/CD",
       "Nginx & reverse proxying",
-      "Linux server administration",
-    ],
+      "Linux server administration"
+    ]
   },
   {
     name: "Databases",
@@ -106,8 +110,8 @@ export const skills = [
       "PostgreSQL",
       "MongoDB",
       "Redis (caching & queues)",
-      "Vector databases",
-    ],
+      "Vector databases"
+    ]
   },
   {
     name: "Tools & Practices",
@@ -116,12 +120,40 @@ export const skills = [
       "Git & GitHub",
       "Postman & API testing",
       "Clean architecture & design patterns",
-      "Agile & cross-functional collaboration",
-    ],
-  },
+      "Agile & cross-functional collaboration"
+    ]
+  }
 ];
 
 export const experience = [
+  {
+    role: "Technical Lead",
+    company: "AttuceOrg — Azadey (Fintech)",
+    date: "2026 – Present",
+    desc: "Lead engineer of Azadey, a production Nigerian fintech platform that sells airtime and data on a missed call — no app, no wallet balance required. Owning the money pipeline: payments, fraud, multi-provider failover, and financial integrity under real-money conditions.",
+    highlights: [
+      "Designed the flash-to-value architecture: call webhook → Redis-locked, BullMQ-queued processing → idempotent wallet settlement → multi-provider VTU delivery → WhatsApp/Telegram/SMS notification",
+      "Built zero-balance backup charging against Paystack Direct Debit and cards, so a flash succeeds even when the wallet is empty — with HMAC-verified, idempotent crediting",
+      "Shipped a 5-provider VTU router with automatic failover and per-provider circuit breakers, plus a self-healing float manager with full treasury reconciliation",
+      "Enforced financial integrity: Row-Level Security on all financial tables, atomic deduct-and-status RPCs, session-id dedup, and a documented vulnerability audit with fixes",
+      "Led the team building Telegram/WhatsApp bots, family plans, subscription billing, rate limiting, and admin dashboards"
+    ],
+    stack: [
+      "Node.js",
+      "TypeScript",
+      "Express",
+      "PostgreSQL",
+      "Redis",
+      "BullMQ",
+      "Paystack",
+      "Monnify",
+      "Telegram",
+      "WhatsApp"
+    ],
+    links: {
+      demo: "https://t.me/azadey_bot"
+    }
+  },
   {
     role: "Freelance Web Developer & Consultant",
     company: "Able World Consultancy — Client Project",
@@ -133,13 +165,20 @@ export const experience = [
       "Added scroll reveals and page transitions with Framer Motion plus an Embla testimonial slider for a polished, conversion-focused user experience.",
       "Engineered SEO-ready pages, a search widget for study destinations, and WhatsApp CTAs to drive client enquiries.",
       "Shipped CI/CD via Netlify with SPA redirects and instant preview deploys — a smooth, professional release workflow.",
-      "Built for accessibility, responsiveness, and fast page loads so the site performs on any device, from any location.",
+      "Built for accessibility, responsiveness, and fast page loads so the site performs on any device, from any location."
     ],
-    stack: ["React", "Vite", "Tailwind CSS", "React Router", "Framer Motion", "Netlify"],
+    stack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Framer Motion",
+      "Netlify"
+    ],
     links: {
       demo: "https://ableworldconsultancy.netlify.app/",
-      github: "https://github.com/Victor-MGB/ableworldconsultancy",
-    },
+      github: "https://github.com/Victor-MGB/ableworldconsultancy"
+    }
   },
   {
     role: "Software Engineer",
@@ -150,9 +189,9 @@ export const experience = [
       "Developed scalable backend systems with Node.js and Python for enterprise and public-sector deployments.",
       "Built AI-powered automation and intelligent workflows that reduced manual operational effort.",
       "Designed secure backend architectures and optimized application performance.",
-      "Delivered production-ready software on schedule with cross-functional teams.",
+      "Delivered production-ready software on schedule with cross-functional teams."
     ],
-    stack: ["Node.js", "Python", "PostgreSQL", "Redis", "Docker"],
+    stack: ["Node.js", "Python", "PostgreSQL", "Redis", "Docker"]
   },
   {
     role: "Backend Developer",
@@ -163,9 +202,9 @@ export const experience = [
       "Designed MongoDB schemas for efficient order and customer management.",
       "Implemented JWT authentication and real-time order tracking.",
       "Shipped secure REST APIs with Node.js and Express.js.",
-      "Collaborated with frontend engineers to deliver a seamless ordering experience.",
+      "Collaborated with frontend engineers to deliver a seamless ordering experience."
     ],
-    stack: ["Node.js", "Express.js", "MongoDB", "JWT", "REST"],
+    stack: ["Node.js", "Express.js", "MongoDB", "JWT", "REST"]
   },
   {
     role: "Technical Lead & Service Delivery Contributor",
@@ -175,9 +214,9 @@ export const experience = [
     highlights: [
       "Designed backend architecture and API structure using Node.js.",
       "Translated business requirements into scalable technical solutions.",
-      "Advised on backend scalability, product management, and system design.",
+      "Advised on backend scalability, product management, and system design."
     ],
-    stack: ["Node.js", "System Design", "Product", "API Design"],
+    stack: ["Node.js", "System Design", "Product", "API Design"]
   },
   {
     role: "Frontend / JavaScript Developer Intern",
@@ -187,17 +226,137 @@ export const experience = [
     highlights: [
       "Developed interactive UIs and integrated them with backend REST APIs.",
       "Improved application performance and user experience.",
-      "Worked in Agile teams using Git for version control.",
+      "Worked in Agile teams using Git for version control."
     ],
-    stack: ["JavaScript", "React", "REST", "HTML/CSS", "Git"],
-  },
+    stack: ["JavaScript", "React", "REST", "HTML/CSS", "Git"]
+  }
 ];
 
 export const projects = [
   {
-    name: "Halifax Offshore Private Bank — Backend API",
+    name: "Azadey — Flash-to-Top-Up Fintech Platform",
     tagline:
-      "Production banking backend with a 22-stage compliance workflow.",
+      "Flash a number. Airtime/data in ~10 seconds. Zero balance needed.",
+    description:
+      "Production-grade Nigerian fintech backend (I lead the engineering) that sells airtime and data on a missed call — no app, no USSD menu, no wallet balance required. Flashes flow through Redis-locked, BullMQ-queued pipelines backed by Paystack/Monnify rails, five-provider VTU failover, a self-healing float manager, and family plans — all under real-money conditions.",
+    problem:
+      "Most Nigerians recharge via USSD or apps — both need balance, data, or patience. Azadey lets anyone buy mobile top-up with a single missed call: the platform must verify the caller, run fraud and rate-limit checks, charge a wallet or backup card, and deliver through a provider that may be down — reliably, idempotently, and in seconds.",
+    architecture: [
+      "Flash-to-value pipeline: Africa's Talking call webhook ACKs in milliseconds, real work runs async in BullMQ — per-phone Redis locks (SET NX EX 15s), session-id dedup, fraud/rate-limit checks, atomic wallet debit, VTU delivery, then WhatsApp/Telegram/SMS/E-mail notification",
+      "Zero-balance backup charging: an empty wallet auto-charges a linked Paystack bank mandate or card and credits the wallet so the flash still succeeds — HMAC-verified and idempotent, so no double-charges",
+      "Multi-provider VTU router with circuit breaker: 5 aggregators in automatic failover (VTUPass primary), per-provider circuit breaking after 5 failures, normalized responses, float checks, and low-float Telegram alerts",
+      "Self-healing float manager: re-reads the provider balance after every flash, auto-refills the float to base from the treasury via idempotent Paystack transfers, funds large purchases on demand, and writes every movement to treasury_ledger",
+      "Concurrency-hardened: Redis phone locks block racing flashes from the same number, DB unique constraints + deduct_wallet_and_update_txn RPC kill double-credit/double-deduct, and webhook replays get caught by session-id dedup",
+      "Security-obsessed: Row-Level Security on every financial table, Paystack HMAC verification on all webhooks, IP allowlists, JWT-protected admin, XSS escaping, and secrets stripped from logs",
+      "Multi-channel engagement: Telegram bot (grammY) and WhatsApp bot (Baileys) for onboarding, orders, gift flashes, and family management — plus SMS and email"
+    ],
+    stack: [
+      "Node.js",
+      "TypeScript",
+      "Express 5",
+      "PostgreSQL",
+      "Supabase",
+      "Redis",
+      "BullMQ",
+      "Paystack",
+      "Monnify",
+      "Telegram Bot",
+      "Africa's Talking"
+    ],
+    github: null,
+    demo: "https://t.me/azadey_bot",
+    demoLabel: "Try the bot",
+    visual: "flash"
+  },
+  {
+    name: "KnowFlow — Multi-tenant AI Knowledge Platform",
+    tagline:
+      "Ingest documents, retrieve with vectors, answer with RAG — every answer cited.",
+    description:
+      'A production-shaped, test-pinned AI knowledge platform built in 30 days, not a demo: asynchronous document ingestion (extract → chunk → embed → index), pgvector semantic retrieval scoped per tenant inside the query itself, grounded RAG answers where every claim cites document · section · page, an honest "I don\'t know" guardrail, a golden evaluation harness, and Prometheus/Grafana observability. 384 tests passing across backend and AI services.',
+    problem:
+      "Teams sit on piles of private documents — PDFs, policies, runbooks, specs. Generic LLM chat can't answer from them: the model never saw the data, hallucinates freely, and would leak one tenant's documents into another's answers.",
+    architecture: [
+      "Multi-tenant isolation: documents, chunks, vectors, conversations, and users scoped to an org — the tenant filter lives inside the pgvector HNSW search SQL, so a caller physically cannot retrieve chunks it may not read",
+      "Async ingestion pipeline: upload → Redis RQ queue → worker (extract → chunk → embed → index), with a durable two-phase job ledger in Postgres so a crashed worker never loses the truth",
+      "RAG with citations: only retrieved, permission-filtered chunks enter the context; answers are streamed via SSE with a { content, citations, refused } contract the UI renders",
+      'Refusal honesty: when no chunk clears the confidence floor the model answers the canonical "I don\'t know" with refused: true — the chat UI\'s "Refuse weak matches" toggle makes the guardrail exercisable',
+      "Evaluation harness: golden corpus of deterministic PDFs with outline bookmarks + metric pins (recall/hit/citation/hallucination) that run in CI — hallucination rate pinned at 0.000",
+      "Observability: every ingestion job and RAG request emits Prometheus metrics from backend, ai-service, and worker, on a provisioned Grafana dashboard",
+      "Auth & teams: JWT access + rotating refresh tokens, per-tenant registration, four-role orgs (OWNER > ADMIN > MEMBER > VIEWER), invitations"
+    ],
+    stack: [
+      "TypeScript",
+      "Node.js",
+      "Fastify",
+      "Python",
+      "FastAPI",
+      "React",
+      "PostgreSQL",
+      "pgvector",
+      "Redis",
+      "MinIO",
+      "Docker",
+      "RAG"
+    ],
+    github: "https://github.com/Victor-MGB/ai-knowledge-platform",
+    demo: null,
+    visual: "chat",
+    gallery: [
+      {
+        type: "image",
+        src: knowflowChat,
+        label: "Cited RAG answer",
+        alt: "KnowFlow chat — a grounded answer with citations to the source document, section, and page"
+      },
+      {
+        type: "image",
+        src: knowflowDocuments,
+        label: "Documents pipeline",
+        alt: "KnowFlow document list with READY documents showing page and chunk counts after async ingestion"
+      },
+      {
+        type: "video",
+        src: knowflowDemoVideo,
+        poster: knowflowChat,
+        label: "Live demo (60s)",
+        alt: "KnowFlow live screen recording — login, cited RAG answers, honest refusal, and Grafana/Prometheus observability"
+      },
+      {
+        type: "image",
+        src: knowflowRefusal,
+        label: "Honest refusal",
+        alt: "KnowFlow refusing an out-of-corpus question instead of hallucinating"
+      },
+      {
+        type: "image",
+        src: knowflowGrafana,
+        label: "Observability",
+        alt: "Provisioned Grafana dashboard showing ingestion and RAG metrics"
+      },
+      {
+        type: "image",
+        src: knowflowApiDocs,
+        label: "OpenAPI contract",
+        alt: "Swagger / OpenAPI docs for the AI service"
+      },
+      {
+        type: "image",
+        src: knowflowRegister,
+        label: "Tenant registration",
+        alt: "KnowFlow registration — mints a tenant and OWNER in one transaction"
+      },
+      {
+        type: "image",
+        src: knowflowLogin,
+        label: "Login",
+        alt: "KnowFlow sign-in screen"
+      }
+    ]
+  },
+  {
+    name: "Halifax Offshore Private Bank — Backend API",
+    tagline: "Production banking backend with a 22-stage compliance workflow.",
     description:
       "A complete digital-banking backend: JWT auth, multi-currency accounts, ACID-safe transfers, an in-app notification system, admin analytics, and a 22-stage withdrawal compliance pipeline — built with Node.js, Express, and MongoDB and deployed with Docker.",
     problem:
@@ -208,12 +367,20 @@ export const projects = [
       "Multi-currency accounts with auto-generated 10-digit numbers, freeze/suspend controls, and role-based access (user / admin)",
       "JWT + bcrypt auth (10 salt rounds), suspended-account login blocking, and CORS locked to configured frontend origins",
       "Admin analytics (volume, trends, categories), user/account management, and a priority-labelled support-ticket system",
-      "Dockerized with 6 health/monitoring endpoints and a demo seeder (3 users, 30+ transactions)",
+      "Dockerized with 6 health/monitoring endpoints and a demo seeder (3 users, 30+ transactions)"
     ],
-    stack: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "bcryptjs", "Docker"],
+    stack: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "bcryptjs",
+      "Docker"
+    ],
     github: "https://github.com/Victor-MGB/halifax_backend",
     demo: "https://transcendent-semifreddo-84170b.netlify.app/",
-    visual: "bank",
+    visual: "bank"
   },
   {
     name: "SwiftCargo",
@@ -229,12 +396,21 @@ export const projects = [
       "Map tracking built on OpenStreetMap — admin searches or clicks a spot, it saves as pending, and clients only ever see the last approved location",
       "JWT + bcrypt auth with separate client and admin roles, plus in-app notifications (bell icon) for every status and location change",
       "Guest tracking codes let unregistered clients follow a parcel — generated and shared manually by the admin",
-      "Payment proofs routed to a dedicated review queue where approval also flips the order's status",
+      "Payment proofs routed to a dedicated review queue where approval also flips the order's status"
     ],
-    stack: ["Node.js", "Express.js", "MongoDB", "React", "Vite", "Tailwind CSS", "OpenStreetMap", "JWT"],
+    stack: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "OpenStreetMap",
+      "JWT"
+    ],
     github: "https://github.com/Victor-MGB/SwiftCargo",
     demo: "https://swiftcarg.netlify.app/",
-    visual: "map",
+    visual: "map"
   },
   {
     name: "Ledger — AI Finance Dashboard",
@@ -249,17 +425,26 @@ export const projects = [
       "Spending analytics computed in Postgres functions, not client-side math",
       "Gemini budget tips grounded in real numbers with strict JSON-schema validation",
       "Row Level Security on every table — ownership enforced by Postgres itself",
-      "Currency-aware formatting and AI phrasing for NGN, USD, GHS, KES and more",
+      "Currency-aware formatting and AI phrasing for NGN, USD, GHS, KES and more"
     ],
-    stack: ["TypeScript", "Node.js", "Express.js", "React", "Supabase", "PostgreSQL", "Plaid", "Gemini"],
-    github: "https://github.com/Victor-MGB/ledger-AI-Powered-Personal-Finance-Dashboard",
+    stack: [
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "React",
+      "Supabase",
+      "PostgreSQL",
+      "Plaid",
+      "Gemini"
+    ],
+    github:
+      "https://github.com/Victor-MGB/ledger-AI-Powered-Personal-Finance-Dashboard",
     demo: "https://ledger-ai-powered-personal-finance-dashboard-3w1dbhpmi.vercel.app/",
-    visual: "dashboard",
+    visual: "dashboard"
   },
   {
     name: "AttuceAI",
-    tagline:
-      "AI-powered sales platform for Telegram businesses.",
+    tagline: "AI-powered sales platform for Telegram businesses.",
     description:
       "A platform that lets businesses automate customer interactions, manage products, process orders, and deploy intelligent AI assistants powered by large language models — all inside Telegram.",
     problem:
@@ -268,12 +453,19 @@ export const projects = [
       "LLM-backed assistant layer handling natural-language product discovery and FAQ resolution",
       "Order and catalog service with transactional consistency for cart and checkout",
       "Modular bot service with rate limiting and idempotent order processing",
-      "Prompt and context strategy to keep responses grounded and on-brand",
+      "Prompt and context strategy to keep responses grounded and on-brand"
     ],
-    stack: ["Node.js", "Python", "OpenAI", "PostgreSQL", "Redis", "Telegram Bot API"],
+    stack: [
+      "Node.js",
+      "Python",
+      "OpenAI",
+      "PostgreSQL",
+      "Redis",
+      "Telegram Bot API"
+    ],
     github: "https://github.com/Victor-MGB",
     demo: null,
-    visual: "chat",
+    visual: "chat"
   },
   {
     name: "Restaurant Ordering Backend",
@@ -286,12 +478,12 @@ export const projects = [
       "JWT-based authentication with role-aware access for customers and kitchen staff",
       "Document schema design for menus, orders, and accounts optimized for read-heavy traffic",
       "Idempotent order creation to prevent duplicate checkouts under retries",
-      "Order status pipeline feeding real-time tracking to the client",
+      "Order status pipeline feeding real-time tracking to the client"
     ],
     stack: ["Node.js", "Express.js", "MongoDB", "JWT", "REST"],
     github: "https://github.com/Victor-MGB",
     demo: null,
-    visual: "dashboard",
+    visual: "dashboard"
   },
   {
     name: "Logistics Management API",
@@ -304,18 +496,18 @@ export const projects = [
       "Secure authentication and role-based access across user and admin flows",
       "Optimized data modeling and indexing for transaction-heavy workloads",
       "RESTful API design with consistent error contracts",
-      "Backend performance tuning to keep response times predictable",
+      "Backend performance tuning to keep response times predictable"
     ],
     stack: ["Node.js", "Express.js", "MongoDB", "REST", "JWT"],
     github: "https://github.com/Victor-MGB",
     demo: null,
-    visual: "terminal",
-  },
+    visual: "terminal"
+  }
 ];
 
 export const contact = {
   heading: "Let's build something engineered well.",
   subheading:
     "I'm currently open to senior backend, AI, and infrastructure roles at product-driven companies. If you're building something that needs thoughtful backend engineering, let's talk.",
-  note: "I usually respond within 24 hours.",
+  note: "I usually respond within 24 hours."
 };
