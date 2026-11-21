@@ -48,13 +48,35 @@ export default function Experience() {
                       href={job.links.demo}
                       target="_blank"
                       rel="noreferrer"
-                      className="experience__link"
-                    >
-                      Live site
-                      <ArrowUpRightIcon width="14" height="14" />
-                    </a>
-                  )}
-                  {job.links.github && (
+                       className="experience__link"
+                     >
+                       {job.links.demoLabel || "Live site"}
+                       <ArrowUpRightIcon width="14" height="14" />
+                     </a>
+                   )}
+                   {job.links.docs && (
+                     <a
+                       href={job.links.docs}
+                       target="_blank"
+                       rel="noreferrer"
+                       className="experience__link"
+                     >
+                       API docs
+                       <ArrowUpRightIcon width="14" height="14" />
+                     </a>
+                   )}
+                   {job.links.app && (
+                     <a
+                       href={job.links.app}
+                       target="_blank"
+                       rel="noreferrer"
+                       className="experience__link"
+                     >
+                       App
+                       <ArrowUpRightIcon width="14" height="14" />
+                     </a>
+                   )}
+                   {job.links.github && (
                     <a
                       href={job.links.github}
                       target="_blank"

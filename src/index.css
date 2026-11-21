@@ -744,7 +744,8 @@ p {
 
 .skills__card {
   padding: 24px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .skills__card:hover {
@@ -815,7 +816,8 @@ p {
 
 .experience__card {
   padding: 28px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .experience__card:hover {
@@ -1808,6 +1810,67 @@ p {
 
 @media (max-width: 900px) {
   .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Education & certifications ---------- */
+
+.education__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.education__card {
+  padding: 28px;
+}
+
+.education__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.education__list {
+  display: grid;
+  gap: 18px;
+}
+
+.education__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.education__item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.education__name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.education__org {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.education__date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-text);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .education__grid {
     grid-template-columns: 1fr;
   }
 }

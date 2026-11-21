@@ -70,38 +70,52 @@ function ProjectCard({project, index}) {
           ))}
         </div>
 
-        <div className="project__links">
-          {project.github && (
-            <a
-              className="project__link"
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <GithubIcon />
-              GitHub
-              <ArrowUpRightIcon />
-            </a>
-          )}
-          {project.demo ? (
-            <a
-              className="project__link"
-              href={project.demo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ArrowUpRightIcon />
-              {project.demoLabel || "Live Demo"}
-            </a>
-          ) : (
-            <span
-              className="project__link"
-              style={{color: "var(--text-muted)", cursor: "default"}}
-            >
-              Demo coming soon
-            </span>
-          )}
-        </div>
+        {(project.github || project.githubBackend || project.demo) && (
+          <div className="project__links">
+            {project.github && (
+              <a
+                className="project__link"
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GithubIcon />
+                {project.githubLabel || "GitHub"}
+                <ArrowUpRightIcon />
+              </a>
+            )}
+            {project.githubBackend && (
+              <a
+                className="project__link"
+                href={project.githubBackend}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GithubIcon />
+                Backend
+                <ArrowUpRightIcon />
+              </a>
+            )}
+            {project.demo ? (
+              <a
+                className="project__link"
+                href={project.demo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ArrowUpRightIcon />
+                {project.demoLabel || "Live Demo"}
+              </a>
+            ) : (
+              <span
+                className="project__link"
+                style={{color: "var(--text-muted)", cursor: "default"}}
+              >
+                Demo coming soon
+              </span>
+            )}
+          </div>
+        )}
       </div>
     </Reveal>
   );

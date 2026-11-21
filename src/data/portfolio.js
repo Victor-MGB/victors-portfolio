@@ -10,16 +10,15 @@ import knowflowDemoVideo from "../assets/projects/knowflow/knowflow-live-demo.mp
 export const profile = {
   name: "Victor Mgbemena",
   monogram: "VM",
-  role: "Backend Engineer",
-  roles: ["Backend Engineer", "AI Engineer", "Cloud Infrastructure"],
-  lead: "I build production-grade backend systems — fintech-grade APIs, AI infrastructure, and the plumbing that keeps platforms running — designed to stay reliable under load and easy to maintain.",
+  role: "Backend Software Engineer",
+  roles: ["Backend Engineer", "Payments & APIs", "Distributed Systems"],
+  lead: "I build backend systems for payments and financial products — APIs, ledgers, webhooks, queues and workers — with Go, TypeScript/Node.js and Python/FastAPI, designed to stay reliable under load and easy to maintain.",
   summary:
-    "I design and build backend systems that power AI products, process millions of requests, and stay reliable under load. I focus on clean architecture, well-considered APIs, and shipping systems that engineers enjoy maintaining.",
+    "I design and build production backend systems for payments, APIs and distributed workloads. My work spans Paystack and Monnify integrations, multi-provider failover, Redis-backed queues, PostgreSQL optimization, authentication, CI/CD and production monitoring.",
   location: "Nigeria",
   email: "mgbemenaosonduv@gmail.com",
   phone: "+234 9077955363",
-  resumeUrl:
-    "https://drive.google.com/file/d/178ElrgS83nhv-1ZJ0dMQ-1RNuHr9LdgR/view?usp=sharing",
+  resumeUrl: "Mgbemena_Victor_Backend_Software_Engineer.pdf",
   github: "https://github.com/Victor-MGB",
   linkedin: "https://www.linkedin.com/in/victor-osondu777/",
   x: "https://x.com/Victor01808002",
@@ -27,19 +26,19 @@ export const profile = {
   facts: [
     {
       label: "Currently",
-      value: "Open to senior backend & AI engineering roles"
+      value: "Leading engineering at Attuce — Azadey, Azapay, Blip"
     },
     {
       label: "Focus",
-      value: "Fintech, AI infrastructure, distributed systems"
+      value: "Payments, APIs & distributed systems"
     },
     {
       label: "Experience",
-      value: "3+ years building production software"
+      value: "5+ years building production software"
     },
     {
       label: "Notable build",
-      value: "22-stage compliance workflow for a banking backend"
+      value: "Go payment infrastructure with idempotent webhooks"
     },
     {
       label: "Based in",
@@ -53,14 +52,16 @@ export const navLinks = [
   {label: "Skills", href: "#skills"},
   {label: "Experience", href: "#experience"},
   {label: "Projects", href: "#projects"},
+  {label: "Education", href: "#education"},
   {label: "Contact", href: "#contact"}
 ];
 
 export const about = {
   paragraphs: [
-    "I'm a backend engineer who builds **scalable APIs, intelligent systems, and cloud infrastructure** for AI-powered products. I work primarily with **Node.js, Python, FastAPI, and PostgreSQL**, and I care deeply about reliability, observability, and clean software design.",
-    "Over the past few years I've shipped production systems across e-commerce, logistics, fintech, and AI platforms — from order-processing pipelines and **multi-currency banking APIs** to **LLM-powered assistants and RAG pipelines**. I've also contributed to government and enterprise projects as a software engineer during my national service.",
-    "I treat engineering as a craft: predictable performance, thoughtful API contracts, and architecture that can grow with the product. I enjoy turning ambiguous problems into simple, well-engineered systems."
+    "I'm a backend software engineer focused on **payments, APIs and distributed systems**. I work with **Go, TypeScript/Node.js and Python/FastAPI**, and I care deeply about reliability, observability, and clean software design.",
+    "I've shipped production systems across fintech, e-commerce, logistics and AI — from **Paystack/Monnify payment workflows with multi-provider failover** and **Redis-backed queues and workers** to **LLM assistants and RAG pipelines**. I've also owned backend services end to end, including systems serving 200K+ monthly requests at 99.98% uptime.",
+    "I lead engineering across Attuce's live products — Azadey (fintech), Azapay (spend and savings automation) and Blip (notification and call platform) — and co-own Blip's technical production with a backend focus.",
+    "Right now I'm deepening my Go engineering with a financial operations and payment infrastructure platform: gin services, goroutines and channels, idempotent webhook handling, PostgreSQL, Redis and Docker, designed around auditability and graceful failure."
   ]
 };
 
@@ -68,17 +69,28 @@ export const skills = [
   {
     name: "Languages",
     icon: "code",
-    items: ["JavaScript / TypeScript", "Python", "SQL", "HTML & CSS"]
+    items: ["Go", "TypeScript / JavaScript", "Python", "SQL"]
   },
   {
     name: "Backend",
     icon: "server",
     items: [
-      "Node.js & Express.js",
+      "Go & Gin",
+      "Node.js, Express & Fastify",
       "Python & FastAPI",
-      "REST API design",
-      "WebSockets & real-time services",
-      "Microservices architecture"
+      "REST APIs & webhooks",
+      "Microservices & event-driven design"
+    ]
+  },
+  {
+    name: "Payments & Integrations",
+    icon: "tool",
+    items: [
+      "Paystack & Monnify",
+      "Payment workflows & multi-provider failover",
+      "Idempotency & failure handling",
+      "WhatsApp Business & Telegram Bot APIs",
+      "CRM integrations"
     ]
   },
   {
@@ -89,47 +101,130 @@ export const skills = [
       "Retrieval-Augmented Generation (RAG)",
       "AI agents & workflow automation",
       "Prompt engineering",
-      "LangChain & vector search"
+      "pgvector & vector search"
     ]
   },
   {
     name: "Cloud & DevOps",
     icon: "cloud",
     items: [
-      // "AWS (EC2, S3, Lambda)",
       "Docker & containerization",
       "GitHub Actions & CI/CD",
       "Nginx & reverse proxying",
-      "Linux server administration"
+      "Linux server administration",
+      "Production monitoring & logging"
     ]
   },
   {
-    name: "Databases",
+    name: "Data & Messaging",
     icon: "database",
     items: [
-      "PostgreSQL",
+      "PostgreSQL (indexing & query optimization)",
       "MongoDB",
-      "Redis (caching & queues)",
-      "Vector databases"
+      "Redis caching, queues & Pub/Sub",
+      "BullMQ & background workers",
+      "Database indexing & query tuning"
     ]
   },
   {
-    name: "Tools & Practices",
-    icon: "tool",
+    name: "Engineering Practices",
+    icon: "code",
     items: [
-      "Git & GitHub",
-      "Postman & API testing",
-      "Clean architecture & design patterns",
-      "Agile & cross-functional collaboration"
+      "Go concurrency: goroutines, channels, context",
+      "JWT, OAuth2 & RBAC",
+      "Unit, integration & E2E testing",
+      "Code review & technical documentation",
+      "Agile & stakeholder collaboration"
     ]
   }
 ];
 
 export const experience = [
   {
+    role: "Backend AI Engineer (Contract)",
+    company: "isoSafe — Phase 1a",
+    date: "Oct – Nov 2026",
+    desc: "isoSafe adds AI video intelligence to the CCTV systems a customer already owns — detecting events on site and raising alerts in a cloud dashboard. I was contracted for the two-week Phase 1a build, where I connected on-site agents to the cloud and made that link reliable enough to demo end to end.",
+    highlights: [
+      "Built the FastAPI agent gateway and its on-site agent client so a camera site could run without a local database, with constant-time-checked bearer-token auth on every request",
+      "Streamed live camera frames over WebSockets into Redis pub/sub for the dashboard, with automatic reconnection and exponential backoff when the network drops",
+      "Added heartbeat reporting and a watchdog so the cloud could see which agents were healthy and alert operators when a site went offline",
+      "Delivered ETag-cached config polling so camera, zone and rule edits made in the dashboard reached agents within ~15 seconds without a redeploy",
+      "Made incident delivery safe to retry: UUID idempotency on the server, a bounded outbox that survives cloud outages, and private S3 snapshot uploads through presigned URLs",
+      "Verified loitering detection and the full agent → cloud → dashboard flow with automated tests, demo scripts and AWS/nginx/Terraform deployment config"
+    ],
+    stack: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "WebSockets",
+      "AWS S3",
+      "Terraform",
+      "Docker",
+      "nginx",
+      "pytest"
+    ]
+  },
+  {
+    role: "Technical Lead & Co-Owner",
+    company: "Attuce — Blip",
+    date: "Sep 2026 – Present",
+    desc: "Co-own the technical production of Blip, a live notification and call platform that turns tags in Google/Microsoft spreadsheets into tracked, wallet-funded calls, SMS and in-app notifications. I own the backend: a Go modular monolith handling sheet sync, telephony, wallet accounting, auth and payments.",
+    highlights: [
+      "Built the send lifecycle end to end — tag detection → 5-minute grace window → tier selection → call → wallet debit → sheet write-back — proven by 7 PRD scenarios and 116 integration tests against real Postgres and Redis",
+      "Implemented the asynchronous telephony engine with an Africa's Talking adapter, signed status webhooks, carrier voice documents and per-tier hang-up rules (Beep, PickCut, Fullcall)",
+      "Shipped Clerk-backed auth with signed webhooks that mirror accounts and sessions, plus encrypted OAuth token storage for Google Sheets and OneDrive/Excel connections",
+      "Delivered Paystack subscriptions, an Asynq/Redis worker fleet, readiness probes for DB/Redis/queue/auth, and Swagger/OpenAPI docs in production"
+    ],
+    stack: [
+      "Go 1.26",
+      "Gin",
+      "GORM",
+      "PostgreSQL",
+      "Redis",
+      "Asynq",
+      "Clerk",
+      "Africa's Talking",
+      "Paystack",
+      "Docker"
+    ],
+    links: {
+      docs: "https://blip-e98k.onrender.com/swagger/index.html",
+      app: "https://bleecle.top"
+    }
+  },
+  {
     role: "Technical Lead",
-    company: "AttuceOrg — Azadey (Fintech)",
-    date: "2026 – Present",
+    company: "Attuce — Azapay",
+    date: "Aug 2026 – Present",
+    desc: "Lead engineering for Azapay, a production spend and savings automation product. I own the Python/FastAPI backend: intent recording, scheduled money movement, confirmation and reconciliation for recurring pays and saves.",
+    highlights: [
+      "Designed the intent → execute → confirm → reconcile pipeline so PostgreSQL is the single source of financial truth and Redis/Celery only coordinate work",
+      "Built FastAPI intent intake and webhook handling with idempotency keys minted with the intent and reused across every worker retry",
+      "Integrated Paystack for money movement and Cowrywise for savings behind sealed adapters, with reconciliation sweeps and append-only audit events",
+      "Shipped the production API with OpenAPI docs alongside the Next.js web app, with reconciliation and audit on every execution path"
+    ],
+    stack: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Celery",
+      "Next.js",
+      "Paystack",
+      "Cowrywise",
+      "Docker"
+    ],
+    links: {
+      docs: "https://azapay.onrender.com/docs",
+      app: "https://azapay-frontend.vercel.app"
+    }
+  },
+  {
+    role: "Technical Lead",
+    company: "Attuce — Azadey (Fintech)",
+    date: "Jun 2026 – Present",
     desc: "Lead engineer of Azadey, a production Nigerian fintech platform that sells airtime and data on a missed call — no app, no wallet balance required. Owning the money pipeline: payments, fraud, multi-provider failover, and financial integrity under real-money conditions.",
     highlights: [
       "Designed the flash-to-value architecture: call webhook → Redis-locked, BullMQ-queued processing → idempotent wallet settlement → multi-provider VTU delivery → WhatsApp/Telegram/SMS notification",
@@ -151,8 +246,104 @@ export const experience = [
       "WhatsApp"
     ],
     links: {
-      demo: "https://t.me/azadey_bot"
+      demo: "https://t.me/azadey_bot",
+      demoLabel: "Try the bot",
+      docs: "https://azadey.onrender.com/api-docs"
     }
+  },
+  {
+    role: "Backend Engineer — FinPay (Fintech Platform)",
+    company: "Personal Project",
+    date: "2025",
+    desc: "Built a production-oriented fintech backend from the ground up: 48+ secure REST endpoints covering core financial workflows, with security hardening, caching and automated delivery.",
+    highlights: [
+      "Implemented 48+ secure RESTful endpoints for account, transaction and financial workflows",
+      "Added JWT authentication, RBAC and security hardening before first user contact",
+      "Structured modular service boundaries to support future microservice decomposition",
+      "Used Redis caching and Pub/Sub to cut repeated database work and improve response under traffic spikes",
+      "Shipped GitHub Actions CI/CD and automated deploys, maintaining 99.9% availability and average API latency below 80ms",
+      "Added production monitoring and operational logging for application and infrastructure issues"
+    ],
+    stack: [
+      "Node.js",
+      "TypeScript",
+      "Express.js",
+      "PostgreSQL",
+      "Redis",
+      "JWT",
+      "RBAC",
+      "GitHub Actions"
+    ]
+  },
+  {
+    role: "Software Engineer — AI-driven Shopping App",
+    company: "Umarks Technology",
+    date: "2024 – 2025",
+    desc: "Architected and optimized the Node.js backend behind an AI-driven shopping app serving 200K+ monthly requests at 99.98% uptime.",
+    highlights: [
+      "Scaled a Node.js backend processing 200K+ monthly requests at 99.98% uptime",
+      "Built and maintained REST APIs handling 10K+ daily requests with 99.9% reliability",
+      "Implemented JWT and OAuth2 authentication and authorization for customer-facing services",
+      "Optimized PostgreSQL schemas, indexes and queries — 30% lower query latency and 20% lower system load",
+      "Applied Redis caching and query optimization to improve API response times by 25%"
+    ],
+    stack: ["Node.js", "PostgreSQL", "Redis", "JWT", "OAuth2", "REST"]
+  },
+  {
+    role: "Backend Engineer — AI Sales Automation",
+    company: "Attuce, Lagos",
+    date: "2022 – 2025",
+    desc: "Built the backend for a multi-tenant AI sales automation platform running always-on customer conversations and automated business workflows across WhatsApp and Telegram.",
+    highlights: [
+      "Designed backend architecture around scalability and integration needs, reducing implementation rework",
+      "Built REST APIs with Node.js, Fastify and TypeScript for internal and external services",
+      "Integrated WhatsApp Business API and Telegram Bot API for automated customer conversations",
+      "Built CRM integrations that synchronize sales data with external services in real time",
+      "Used Redis queues and workers for event-driven, non-blocking concurrent workloads",
+      "Monitored production performance — 15% efficiency gain and 10% lower resource consumption"
+    ],
+    stack: [
+      "Node.js",
+      "Fastify",
+      "TypeScript",
+      "Redis",
+      "WhatsApp Business API",
+      "Telegram Bot API",
+      "CRM Integrations"
+    ]
+  },
+  {
+    role: "Backend Engineer",
+    company: "Coldigify",
+    date: "2023 – 2024",
+    desc: "Built scalable backend services and REST APIs for product teams, with a focus on data performance and secure, repeatable releases.",
+    highlights: [
+      "Built REST APIs with Node.js, Express, TypeScript and MongoDB",
+      "Designed schemas, indexes and queries that improved data retrieval performance by 35%",
+      "Implemented authentication, authorization and data encryption controls",
+      "Used Git branching strategies, CI/CD and automated testing for reliable releases",
+      "Diagnosed and resolved backend performance and integration issues"
+    ],
+    stack: ["Node.js", "Express.js", "TypeScript", "MongoDB", "JWT", "CI/CD"]
+  },
+  {
+    role: "Backend & AI Integration Engineer",
+    company: "AiBodex Technologies",
+    date: "2021 – 2023",
+    desc: "Built backend APIs and third-party integrations, owning projects from technical feasibility analysis through implementation and delivery.",
+    highlights: [
+      "Built backend APIs and third-party integrations with Node.js, maintaining 99.9% service uptime",
+      "Improved backend latency by 15% through application and integration optimization",
+      "Introduced code reviews and testing improvements — 40% fewer reported bugs and 35% higher unit-test coverage",
+      "Owned backend projects end to end, including feasibility, implementation and delivery"
+    ],
+    stack: [
+      "Node.js",
+      "REST APIs",
+      "Third-party Integrations",
+      "Testing",
+      "Code Review"
+    ]
   },
   {
     role: "Freelance Web Developer & Consultant",
@@ -207,16 +398,25 @@ export const experience = [
     stack: ["Node.js", "Express.js", "MongoDB", "JWT", "REST"]
   },
   {
-    role: "Technical Lead & Service Delivery Contributor",
-    company: "Nnewi Tech Faculty",
-    date: "Aug 2024 – Sep 2025",
-    desc: "Drove the backend architecture of a government-focused community e-commerce initiative.",
+    role: "Service Delivery Manager & Technical Lead",
+    company: "Technology Faculty",
+    date: "2023 – 2024",
+    desc: "Managed outsourced technical delivery across client companies while leading backend architecture for a government-focused community e-commerce initiative.",
     highlights: [
-      "Designed backend architecture and API structure using Node.js.",
-      "Translated business requirements into scalable technical solutions.",
-      "Advised on backend scalability, product management, and system design."
+      "Managed 20+ outsourced technical agents across client companies with SLA compliance above 85%",
+      "Designed operational KPIs, QA frameworks and escalation processes — 18% better first-call resolution",
+      "Led continuous-improvement initiatives that reduced ticket backlog by 35% in six months",
+      "Designed Node.js backend architecture and API structure for a government-focused community e-commerce initiative",
+      "Translated business requirements into scalable technical solutions and advised on system design"
     ],
-    stack: ["Node.js", "System Design", "Product", "API Design"]
+    stack: [
+      "Node.js",
+      "Service Delivery",
+      "QA & KPIs",
+      "Escalation Management",
+      "API Design",
+      "System Design"
+    ]
   },
   {
     role: "Frontend / JavaScript Developer Intern",
@@ -233,41 +433,6 @@ export const experience = [
 ];
 
 export const projects = [
-  {
-    name: "Azadey — Flash-to-Top-Up Fintech Platform",
-    tagline:
-      "Flash a number. Airtime/data in ~10 seconds. Zero balance needed.",
-    description:
-      "Production-grade Nigerian fintech backend (I lead the engineering) that sells airtime and data on a missed call — no app, no USSD menu, no wallet balance required. Flashes flow through Redis-locked, BullMQ-queued pipelines backed by Paystack/Monnify rails, five-provider VTU failover, a self-healing float manager, and family plans — all under real-money conditions.",
-    problem:
-      "Most Nigerians recharge via USSD or apps — both need balance, data, or patience. Azadey lets anyone buy mobile top-up with a single missed call: the platform must verify the caller, run fraud and rate-limit checks, charge a wallet or backup card, and deliver through a provider that may be down — reliably, idempotently, and in seconds.",
-    architecture: [
-      "Flash-to-value pipeline: Africa's Talking call webhook ACKs in milliseconds, real work runs async in BullMQ — per-phone Redis locks (SET NX EX 15s), session-id dedup, fraud/rate-limit checks, atomic wallet debit, VTU delivery, then WhatsApp/Telegram/SMS/E-mail notification",
-      "Zero-balance backup charging: an empty wallet auto-charges a linked Paystack bank mandate or card and credits the wallet so the flash still succeeds — HMAC-verified and idempotent, so no double-charges",
-      "Multi-provider VTU router with circuit breaker: 5 aggregators in automatic failover (VTUPass primary), per-provider circuit breaking after 5 failures, normalized responses, float checks, and low-float Telegram alerts",
-      "Self-healing float manager: re-reads the provider balance after every flash, auto-refills the float to base from the treasury via idempotent Paystack transfers, funds large purchases on demand, and writes every movement to treasury_ledger",
-      "Concurrency-hardened: Redis phone locks block racing flashes from the same number, DB unique constraints + deduct_wallet_and_update_txn RPC kill double-credit/double-deduct, and webhook replays get caught by session-id dedup",
-      "Security-obsessed: Row-Level Security on every financial table, Paystack HMAC verification on all webhooks, IP allowlists, JWT-protected admin, XSS escaping, and secrets stripped from logs",
-      "Multi-channel engagement: Telegram bot (grammY) and WhatsApp bot (Baileys) for onboarding, orders, gift flashes, and family management — plus SMS and email"
-    ],
-    stack: [
-      "Node.js",
-      "TypeScript",
-      "Express 5",
-      "PostgreSQL",
-      "Supabase",
-      "Redis",
-      "BullMQ",
-      "Paystack",
-      "Monnify",
-      "Telegram Bot",
-      "Africa's Talking"
-    ],
-    github: null,
-    demo: "https://t.me/azadey_bot",
-    demoLabel: "Try the bot",
-    visual: "flash"
-  },
   {
     name: "KnowFlow — Multi-tenant AI Knowledge Platform",
     tagline:
@@ -355,6 +520,125 @@ export const projects = [
     ]
   },
   {
+    name: "QuotexZainTrader — Telegram Investment Bot",
+    tagline:
+      "A full-stack investment product delivered entirely inside Telegram.",
+    description:
+      "An end-to-end Telegram investment platform I built as full-stack developer: a Grammy/TypeScript bot, PostgreSQL data model and migrations with Drizzle, and private Supabase Storage for media. Members register, view plans, deposit, withdraw, track balances and referrals; admins approve money movement, manage users and publish moderated testimonies.",
+    problem:
+      "A Telegram-first investment product cannot rely on a separate web app to earn trust. Members need clear balances and history, while operators need controls that survive restarts, resist double approvals, and keep uploaded proof available after deploys.",
+    architecture: [
+      "Built the whole bot in TypeScript with Grammy — webhook and polling modes, inline-keyboard screens, HTML-safe rendering, error boundaries and rate limiting",
+      "Designed PostgreSQL schema and 7 Drizzle migrations for users, balances, whitelist, access requests, admins, referrals, testimonies and a transaction ledger",
+      "Made money movement safe with DB transactions, row locks and a pending-status guard — approvals apply balance changes once, withdrawals cannot overdraw, and manual corrections write signed adjustment rows",
+      "Added banking-style in-memory sessions with inactivity timeout, logout and a watchdog, plus a member gate that blocks every non-auth screen until there is a live login and a real account",
+      "Captured referral deep links before the access gate so first-touch attribution works even when the invitee has no account yet",
+      "Built a moderated testimony feed with member submissions, admin publishing, soft deletes with undo, and private Supabase Storage served through short-lived signed URLs",
+      "Shipped an admin console for access requests, transaction queues, user promotion/removal and balance management, with Pino logging and a throwaway-database regression suite"
+    ],
+    stack: [
+      "TypeScript",
+      "Node.js",
+      "Grammy",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Supabase Storage",
+      "Pino",
+      "Zod",
+      "Webhooks"
+    ],
+    github: "https://github.com/Victor-MGB/Quotetexzaintrader",
+    demo: "https://t.me/QuotexZainTrader_Bot",
+    demoLabel: "Open bot",
+    visual: "chat"
+  },
+  {
+    name: "NEXUS — Financial Operations & Payment Infrastructure",
+    tagline:
+      "Go-based payment infrastructure with idempotent webhooks and auditable workflows.",
+    description:
+      "An in-progress Go platform for financial operations and payments: Gin services, PostgreSQL and Redis for authentication, payments, transaction processing and asynchronous work. Built around goroutines, event-driven service boundaries and auditability.",
+    problem:
+      "Payment systems fail in awkward places — webhooks retry, providers time out, and background jobs must never post twice. NEXUS is being built so every payment event is validated, idempotent and auditable from the start.",
+    architecture: [
+      "Go/Gin services with PostgreSQL and Redis for auth, payments and transaction processing",
+      "Webhook workflows with idempotency, validation, failure handling and structured retries",
+      "Go concurrency with goroutines, channels and context cancellation for background workloads",
+      "Microservice-oriented boundaries with asynchronous communication between components",
+      "Dockerized services and CI/CD for automated testing and deployment",
+      "Reliability, observability, security and auditability as first-class design constraints"
+    ],
+    stack: [
+      "Go",
+      "Gin",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "GitHub Actions",
+      "Payment APIs"
+    ],
+    github: null,
+    demo: null,
+    visual: "bank"
+  },
+  {
+    name: "Aza/Flow — Savings & Payment Platform",
+    tagline:
+      "Envelope-based savings and scheduled money movement with a ledger-derived history.",
+    description:
+      "Backend for a savings and payment platform: savings goals, scheduled transactions and external funding connections. An envelope model with database constraints keeps parent allocations exactly reconciled with child allocations, and transaction history is derived from an auditable ledger.",
+    problem:
+      "Savings products break when allocations drift from their sub-envelopes or when scheduled payments execute twice. Aza/Flow keeps money movement reconcilable by design and derives history from ledger entries instead of mutable balances.",
+    architecture: [
+      "Envelope-based financial data model with database constraints enforcing parent/child reconciliation",
+      "Ledger-derived transaction history for a fully auditable record of activity",
+      "APIs for savings goals, scheduled transactions and external funding connections",
+      "Scheduled processing for future savings executions, payment flows and lock releases",
+      "End-to-end tests from bank funding through payment processing and savings execution"
+    ],
+    stack: [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Redis",
+      "Payment APIs",
+      "Scheduled Jobs"
+    ],
+    github: null,
+    demo: null,
+    visual: "dashboard"
+  },
+  {
+    name: "FinPay — Fintech Platform Backend",
+    tagline:
+      "48+ secure financial endpoints with Redis caching and sub-80ms latency.",
+    description:
+      "A production-oriented fintech backend built from scratch with modular service boundaries, JWT/RBAC security and CI/CD. It covers core financial workflows with automated deploys, monitoring and Redis-backed performance work.",
+    problem:
+      "A fintech backend has to be secure before first contact and fast under traffic spikes. FinPay was designed with modular boundaries, cached reads and automated delivery so it could stay maintainable and responsive.",
+    architecture: [
+      "48+ secure REST endpoints covering core financial workflows",
+      "JWT authentication, RBAC and security hardening completed before first user contact",
+      "Modular service boundaries that support future decomposition into microservices",
+      "Redis caching and Pub/Sub to reduce repeated database reads and absorb traffic spikes",
+      "GitHub Actions CI/CD with automated deployment — 99.9% availability and <80ms average API latency",
+      "Production monitoring and operational logging"
+    ],
+    stack: [
+      "Node.js",
+      "TypeScript",
+      "Express.js",
+      "PostgreSQL",
+      "Redis",
+      "JWT",
+      "RBAC",
+      "GitHub Actions"
+    ],
+    github: null,
+    demo: null,
+    visual: "terminal"
+  },
+  {
     name: "Halifax Offshore Private Bank — Backend API",
     tagline: "Production banking backend with a 22-stage compliance workflow.",
     description:
@@ -380,6 +664,42 @@ export const projects = [
     ],
     github: "https://github.com/Victor-MGB/halifax_backend",
     demo: "https://transcendent-semifreddo-84170b.netlify.app/",
+    visual: "bank"
+  },
+  {
+    name: "Mekite — Crypto Investment Platform",
+    tagline:
+      "Full-stack crypto investing: user dashboard, admin console, and the API behind both.",
+    description:
+      "Mekite (Bit Flux Capital) is a full-stack crypto investment platform I built end to end. Members can register, fund accounts, buy investment plans, track balances and referrals, and request withdrawals; a separate admin console reviews deposits and withdrawals, manages users, and controls bonuses. I built the React client and the Express/MongoDB API.",
+    problem:
+      "An investment platform has two jobs at once: give members a clear, trustworthy view of their money, and give operators control over every state change. That means real approval queues, accurate multi-currency balances, and a workflow that settles matured plans without silently double-crediting anyone.",
+    architecture: [
+      "Built the client and server together — routed React UI for marketing, auth, user dashboard, deposits, withdrawals, history and admin, backed by a 25-endpoint Express REST API",
+      "Modelled BTC/ETH/USDT available and pending balances, active deposits, earnings, withdrawals, referrals and investment lifecycles in Mongoose, with derived pending balance kept in sync on save",
+      "JWT login with bcrypt password hashing, recovery questions, email-based password reset, and user/admin roles with suspend and disable states",
+      "Admin workflows for deposit and withdrawal approval, user funding, bonuses, account management and activity history instead of trusting client-side state",
+      "Referral links and commission tracking, with a daily node-cron job that settles matured plans and marks profit as paid so it is applied once",
+      "Nodemailer transactional email for account details, welcome messages and referral notifications; chart-driven dashboards on the client"
+    ],
+    stack: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "bcryptjs",
+      "React",
+      "Tailwind CSS",
+      "node-cron",
+      "Nodemailer",
+      "Vercel"
+    ],
+    github: "https://github.com/Victor-MGB/mekite_client",
+    githubLabel: "Frontend",
+    githubBackend: "https://github.com/Victor-MGB/mekite_btc",
+    demo: "https://mekite-client.vercel.app/",
+    demoLabel: "Live app",
     visual: "bank"
   },
   {
@@ -443,25 +763,29 @@ export const projects = [
     visual: "dashboard"
   },
   {
-    name: "AttuceAI",
-    tagline: "AI-powered sales platform for Telegram businesses.",
+    name: "AttuceAI — Multi-tenant AI Sales Automation",
+    tagline:
+      "Always-on sales conversations across WhatsApp and Telegram, backed by event-driven workers.",
     description:
-      "A platform that lets businesses automate customer interactions, manage products, process orders, and deploy intelligent AI assistants powered by large language models — all inside Telegram.",
+      "A backend platform for multi-tenant AI sales automation: REST APIs in Node.js, Fastify and TypeScript, WhatsApp Business and Telegram bot integrations, real-time CRM sync, and Redis queues/workers that keep customer-facing requests non-blocking.",
     problem:
-      "Small businesses on Telegram rely on manual replies and spreadsheet orders. They needed an automated sales layer that handles conversations, catalogs, and checkouts at scale.",
+      "Small businesses selling in chat apps drown in manual replies and disconnected sales data. They needed an automated layer that handles conversations and workflows while keeping external CRMs in sync without slowing the customer experience.",
     architecture: [
-      "LLM-backed assistant layer handling natural-language product discovery and FAQ resolution",
-      "Order and catalog service with transactional consistency for cart and checkout",
-      "Modular bot service with rate limiting and idempotent order processing",
-      "Prompt and context strategy to keep responses grounded and on-brand"
+      "REST APIs with Node.js, Fastify and TypeScript for internal and external integrations",
+      "WhatsApp Business API and Telegram Bot API for always-on automated conversations",
+      "CRM integrations that synchronize sales data with external services in real time",
+      "Event-driven backend using Redis queues and workers for concurrent workloads",
+      "Production monitoring and workflow optimization — 15% efficiency gain, 10% lower resource use",
+      "Backend architecture designed around scalability and integration needs to reduce rework"
     ],
     stack: [
       "Node.js",
-      "Python",
-      "OpenAI",
-      "PostgreSQL",
+      "Fastify",
+      "TypeScript",
       "Redis",
-      "Telegram Bot API"
+      "WhatsApp Business API",
+      "Telegram Bot API",
+      "CRM Integrations"
     ],
     github: "https://github.com/Victor-MGB",
     demo: null,
@@ -505,9 +829,30 @@ export const projects = [
   }
 ];
 
+export const education = [
+  {
+    title: "B.Sc. Computer Science",
+    org: "University of Enugu State",
+    date: "2022"
+  },
+  {
+    title: "National Youth Service Corps",
+    org: "Abuja FCT",
+    date: "2025"
+  }
+];
+
+export const certifications = [
+  {
+    title: "Python",
+    org: "LaunchPad",
+    date: "2021"
+  }
+];
+
 export const contact = {
   heading: "Let's build something engineered well.",
   subheading:
-    "I'm currently open to senior backend, AI, and infrastructure roles at product-driven companies. If you're building something that needs thoughtful backend engineering, let's talk.",
+    "I'm currently open to senior backend, payments, and distributed systems roles at product-driven companies. If you're building something that needs thoughtful backend engineering, let's talk.",
   note: "I usually respond within 24 hours."
 };
