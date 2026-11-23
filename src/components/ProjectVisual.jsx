@@ -281,13 +281,64 @@ function MapMockup() {
   );
 }
 
+function StorefrontMockup() {
+  return (
+    <BrowserFrame variant="storefront">
+      <div className="mockup__shop">
+        <div className="mockup__shop-header">
+          <span className="mockup__shop-logo">SHOP</span>
+          <span className="mockup__shop-search">Search 24 products…</span>
+          <span className="mockup__shop-cart">Cart · 2</span>
+        </div>
+        <div className="mockup__shop-body">
+          <div className="mockup__shop-side">
+            <span className="mockup__line" style={{width: "78%"}} />
+            <span
+              className="mockup__line mockup__line--soft"
+              style={{width: "62%"}}
+            />
+            <span
+              className="mockup__line mockup__line--soft"
+              style={{width: "70%"}}
+            />
+            <span
+              className="mockup__line mockup__line--soft"
+              style={{width: "54%"}}
+            />
+            <span
+              className="mockup__line mockup__line--soft"
+              style={{width: "66%"}}
+            />
+          </div>
+          <div className="mockup__shop-grid">
+            {[0, 1, 2, 3].map(i => (
+              <div className="mockup__shop-product" key={i}>
+                <div className="mockup__shop-photo" />
+                <span
+                  className="mockup__line mockup__line--soft"
+                  style={{width: "82%"}}
+                />
+                <span
+                  className="mockup__line mockup__line--accent"
+                  style={{width: "46%"}}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </BrowserFrame>
+  );
+}
+
 const variants = {
   chat: ChatMockup,
   dashboard: DashboardMockup,
   terminal: TermMockup,
   bank: BankMockup,
   map: MapMockup,
-  flash: FlashMockup
+  flash: FlashMockup,
+  storefront: StorefrontMockup
 };
 
 function PlayIcon() {

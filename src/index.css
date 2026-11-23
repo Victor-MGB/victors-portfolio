@@ -1067,6 +1067,51 @@ p {
   height: 15px;
 }
 
+.project__diagram,
+.project__learned {
+  margin-top: 20px;
+}
+
+.project__flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.project__flow-node {
+  display: flex;
+  flex: 1 1 120px;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+
+.project__flow-node-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.project__flow-node-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.project__flow-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--accent-text);
+  font-size: 16px;
+  font-weight: 700;
+}
+
 @media (max-width: 900px) {
   .project {
     grid-template-columns: 1fr;
@@ -1261,6 +1306,95 @@ p {
 
 .mockup--term .mockup__term-line .t-st {
   color: var(--success);
+}
+
+.mockup--storefront .mockup__shop {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.mockup--storefront .mockup__shop-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.mockup--storefront .mockup__shop-logo {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--accent-text);
+}
+
+.mockup--storefront .mockup__shop-search {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-2);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.mockup--storefront .mockup__shop-cart {
+  padding: 6px 9px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--accent-text);
+  white-space: nowrap;
+}
+
+.mockup--storefront .mockup__shop-body {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  min-height: 0;
+  padding-top: 12px;
+}
+
+.mockup--storefront .mockup__shop-side {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 62px;
+  flex-shrink: 0;
+  padding-right: 10px;
+  border-right: 1px solid var(--border);
+}
+
+.mockup--storefront .mockup__shop-grid {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  min-width: 0;
+}
+
+.mockup--storefront .mockup__shop-product {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.mockup--storefront .mockup__shop-photo {
+  flex: 1;
+  min-height: 0;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--surface-3), var(--accent-soft));
 }
 
 /* Bank / compliance variant */

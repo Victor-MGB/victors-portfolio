@@ -434,6 +434,48 @@ export const experience = [
 
 export const projects = [
   {
+    name: "Advanced E-Commerce Platform",
+    category: "Selected Project · Personal Build",
+    tagline:
+      "Full-stack e-commerce platform with secure JWT auth, role-based admin access, Paystack payments with verified webhooks, and production deployment across Netlify and Render.",
+    description:
+      "A full-stack storefront and admin dashboard built as a personal project. The catalog holds 24 products across 6 categories, 11 subcategories and 4 brands, with search/filtering, cart, coupons, wishlist, orders, user accounts and admin management. The React app runs against a live Express/MongoDB API or a seeded demo mode, with currency-aware pricing and product/category image delivery.",
+    problem:
+      "An e-commerce app cannot trust the browser for access control or order creation. Stale client-side roles can expose admin screens, and a retried payment webhook can create the same order twice. This build puts role checks on the server and ties order creation to a verified Paystack reference with stock validation.",
+    architecture: [
+      "Built the catalog, search/filtering, cart, coupons, wishlist, orders, user accounts and admin dashboard across React and Express/MongoDB",
+      "JWT authentication where signup always creates a user account, and admin routes validate roles server-side instead of trusting localStorage",
+      "Paystack checkout with HMAC-signed webhooks, payment reference idempotency, stock validation and automatic order creation",
+      "Responsive storefront with live API mode and seeded demo mode, currency-aware pricing and product/category image delivery",
+      "Deployed the React frontend on Netlify and the Express/MongoDB API on Render with CORS, SPA routing, environment variables and webhook handling configured"
+    ],
+    diagram: [
+      {label: "React storefront", sub: "Netlify"},
+      {label: "Express API", sub: "Render"},
+      {label: "MongoDB", sub: "catalog · users · orders"},
+      {label: "Paystack", sub: "signed webhook → order"}
+    ],
+    learned: [
+      "Client state is a convenience, not a security boundary: admin access is now checked on the server on every protected route.",
+      "Payment flows fail in awkward places — CORS mismatches, Paystack currency mismatch, token loss on redirect and delayed webhooks were all debugged against the deployed app.",
+      "Verifying the reference server-side and keying order creation to it makes checkout safe to retry, even when the webhook arrives late or a Render instance is waking up."
+    ],
+    stack: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Paystack",
+      "JWT",
+      "Netlify",
+      "Render"
+    ],
+    github: "https://github.com/Victor-MGB/Advanced_E_commerce",
+    demo: "https://advanced-e-commerce-g674.netlify.app/",
+    demoLabel: "Live demo",
+    visual: "storefront"
+  },
+  {
     name: "KnowFlow — Multi-tenant AI Knowledge Platform",
     tagline:
       "Ingest documents, retrieve with vectors, answer with RAG — every answer cited.",

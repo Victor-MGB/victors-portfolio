@@ -40,7 +40,8 @@ function ProjectCard({project, index}) {
 
       <div className="project__body">
         <span className="project__number">
-          {String(index + 1).padStart(2, "0")} — Case Study
+          {String(index + 1).padStart(2, "0")} —{" "}
+          {project.category || "Case Study"}
         </span>
         <h3 className="project__name">{project.name}</h3>
         <p className="project__desc">{project.description}</p>
@@ -61,6 +62,45 @@ function ProjectCard({project, index}) {
             ))}
           </ul>
         </div>
+
+        {project.diagram && (
+          <div className="project__diagram">
+            <h4 className="project__arch-title">Architecture</h4>
+            <div className="project__flow">
+              {project.diagram.map((node, i) => (
+                <React.Fragment key={node.label}>
+                  {i > 0 && (
+                    <span className="project__flow-arrow" aria-hidden="true">
+                      →
+                    </span>
+                  )}
+                  <div className="project__flow-node">
+                    <span className="project__flow-node-label">
+                      {node.label}
+                    </span>
+                    <span className="project__flow-node-sub">{node.sub}</span>
+                  </div>
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {project.learned && (
+          <div className="project__learned">
+            <h4 className="project__arch-title">
+              What I learned / problems solved
+            </h4>
+            <ul className="project__arch-list">
+              {project.learned.map(point => (
+                <li key={point}>
+                  <CheckIcon />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="project__stack">
           {project.stack.map(tech => (
